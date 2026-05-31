@@ -42,7 +42,7 @@ jobs:
     runs-on: ${{ matrix.compiler.distro }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: "recursive"
       - name: Install dependencies
@@ -97,7 +97,7 @@ jobs:
             compiler: { name: g++-12, cc: gcc-12, cxx: g++-12 }
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: "recursive"
       - uses: uraimo/run-on-arch-action@v3
@@ -155,7 +155,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: "recursive"
       - name: dependencies
@@ -179,10 +179,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: "recursive"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: dependencies
@@ -212,7 +212,7 @@ jobs:
   #           python-six
   #           mingw-w64-x86_64-gcc
   #           mingw-w64-x86_64-cmake
-  #     - uses: actions/checkout@v4
+  #     - uses: actions/checkout@v6
   #     - name: Checkout submodules
   #       run: git submodule update --init --recursive
   #     - name: Configure
@@ -235,7 +235,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: "recursive"
       - name: dependencies
