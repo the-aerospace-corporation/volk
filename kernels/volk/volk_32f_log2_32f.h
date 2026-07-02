@@ -83,7 +83,6 @@
 #include <volk/volk_mathematical_functions.h>
 
 #include <inttypes.h>
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
